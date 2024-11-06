@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Modern Form with Nav Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin-top: 120px; /* Adjusted to avoid overlapping with navbar */
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-container input[type="text"], 
+        .form-container input[type="email"], 
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .form-container input:focus {
+            border-color: #9290C3;
+            outline: none;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #8ABFA3;
+            border: none;
+            border-radius: 5px;
+            color: #000000;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .form-container button:hover {
+            background-color: #ffffff;
+        }
+
+        .form-container p {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .form-container p a {
+            color: #9290C3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .form-container p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                top: 80px; /* Adjusted for larger navbar */
+                left: 0;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-menu-btn {
+                display: block;
+                color: white;
+                font-size: 2rem; /* Increased font size for mobile menu icon */
+                cursor: pointer;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Cara Membuat Form</p>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list">
+              <a href="index.html" class="nav-link">Home</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="about.htm" class="nav-link">About</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="project.htm" class="nav-link">Projects</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="tutorial.htm" class="nav-link">Tutorial</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="contact.htm" class="nav-link">Contact</a>
+              <div class="circle"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <button class="btn">
+            Download CV <i class="uil uil-file-alt"></i>
+          </button>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>     
+    <!-- Form -->
+    <div class="form-container">
+        <h2>Register</h2>
+        <form action="">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#">Login here</a></p>
+    </div>
+<p>Berikut adalah paragraf dalam bahasa Indonesia untuk mendeskripsikan form registrasi:
+</p>
+ <p> "Formulir registrasi ini mengumpulkan informasi dari pengguna, seperti nama lengkap, alamat email, dan kata sandi. Setiap kolom telah diberi label dengan jelas, sehingga pengguna dapat dengan mudah mengisi data yang diperlukan. Setelah semua informasi terisi, pengguna dapat menekan tombol 'Sign Up' untuk menyelesaikan proses registrasi. Jika pengguna sudah memiliki akun, mereka dapat dengan mudah berpindah ke halaman login melalui tautan 'Login here' yang terletak di bawah form. Desain form ini menekankan kesederhanaan dan kemudahan penggunaan, memastikan pengalaman registrasi yang lancar."</p>
+    <div class="bottom-footer">
+        
+        <p>
+            Copyright 2024 &copy;
+            <a href="#home" style="text-decoration: none">Zainur</a> - All 
+            rights reserved
+          </p>
+    </div>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('myNavMenu');
+            navMenu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

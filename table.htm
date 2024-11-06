@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      /* Main Section */
+      header {
+        background: linear-gradient(135deg, #9290C3, #9290C3);
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      /* Table */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 1rem;
+        text-align: left;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th, td {
+        color: #000000;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #000000;
+      }
+
+      th {
+        background-color: #9290C3;
+        color: white;
+      }
+
+      td {
+        background-color: #f9f9f9;
+      }
+      .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0; /* Remove extra padding */
+}
+
+.dropdown-content li {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove margin to reduce vertical space */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show dropdown content on hover */
+.nav_list.dropdown:hover .dropdown-content {
+  display: block;
+  top: 100%; /* Position dropdown below the menu */
+  left: 0;
+}
+
+/* Adjust the nav link so the dropdown stays aligned */
+.nav_list a {
+  display: inline-block;
+  padding: 10px 20px;
+}
+/* ----- Dropdown ----- */
+/* Dropdown styling */
+.nav_list.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #c4c4c4;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0; /* Remove extra padding */
+}
+
+.dropdown-content li {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove margin to reduce vertical space */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown-content a:hover {
+  background-color: #9290C3;
+  width: 100%;
+}
+
+/* Show dropdown content on hover */
+.nav_list.dropdown:hover .dropdown-content {
+  display: block;
+  top: 100%; /* Position dropdown below the menu */
+  left: 0;
+}
+
+/* Adjust the nav link so the dropdown stays aligned */
+.nav_list a {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: rgb(0, 0, 0);
+        padding: 10px 0;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      footer a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      footer a:hover { 
+        text-decoration: underline;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        #header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .nav-menu ul {
+          flex-direction: column;
+        }
+
+        .nav-menu-btn {
+          margin-top: 20px;
+        }
+
+        table {
+          font-size: 5px;
+        }
+
+        th, td {
+          padding: 10px;
+          width: 40px;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <title>tutorial membuat htmllllll </title>
+  </head>
+  <body> 
+    
+    
+      <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Cara Membuat Table</p>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list">
+              <a href="index.html" class="nav-link">Home</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="about.htm" class="nav-link">About</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="project.htm" class="nav-link">Projects</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list dropdown">
+              <a href="tutorial.htm" class="nav-link">Tutorial</a>
+              <!-- Submenu for Tutorials -->
+              <div class="dropdown-content">
+                <a href="table.htm">Cara Membuat Tabel</a>
+                <a href="form.htm">Cara Membuat Form</a>
+              </div>
+            </li>
+            <li class="nav_list">
+              <a href="contact.htm" class="nav-link">Contact</a>
+              <div class="circle"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <button class="btn">
+            Download CV <i class="uil uil-file-alt"></i>
+          </button>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+      
+      <!-- -------------- MAIN ---------------- -->
+        <!-- -------------- FEATURED BOX ---------------- -->
+         <div style="padding-top: 90px;">
+            <header class="bg-primary text-white text-center py-4">
+              <h2 class="coba">Basic HTML Table</h2>
+              <table border="1">
+                  <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Age</th>
+                  </tr>
+                  <tr>
+                      <td>Messi</td>
+                      <td>coyy</td>
+                      <td>35</td>
+                  </tr>
+                  <tr>
+                      <td>Kane</td>
+                      <td>Harry</td>
+                      <td>30</td>
+                  </tr>
+                  <tr>
+                      <td>Kai</td>
+                      <td>to</td>
+                      <td>40</td>
+                  </tr>
+              </table>
+              <h2 class="coba">Table Mahasiswa</h2>
+              <table border="1">
+                <tr>
+                    <th>Nim</th>
+                    <th>Nama</th>
+                    <th>Ipk</th>
+                    <th>Jurusan</th>
+        
+                </tr>
+                <tr>
+                  <td>5220311139</td>
+                  <td>Bintang</td>
+                  <td>3.75</td>
+                  <td>Sistem Informasi</td>
+      
+              </tr>
+                <tr>
+                    <td>5220311140</td>
+                    <td>Rio</td>
+                    <td>3.55</td>
+                    <td>Sistem Informasi</td>
+        
+                </tr>
+                <tr>
+                    <td>5220311141</td>
+                    <td>Lutfi</td>
+                    <td>3.65</td>
+                    <td>Sistem Informasi</td>
+        
+                </tr>
+                <tr>
+                    <td>5220311143</td>
+                    <td>Febri</td>
+                    <td>3.57</td>
+                    <td>Sistem Informasi</td>
+        
+                </tr>
+              </table>
+
+      <!-- --------------- FOOTER --------------- --> 
+      <footer>
+        <p>
+
+          "Tabel pertama memiliki tiga kolom, yaitu 'First Name', 'Last Name', dan 'Age'. Kolom 'First Name' menampilkan nama depan, seperti Messi, Kane, dan Kai. Kolom 'Last Name' menunjukkan nama belakang, yaitu 'coyy', 'Harry', dan 'to', sedangkan kolom 'Age' mencantumkan usia mereka, yaitu 35, 30, dan 40. Tabel ini menggunakan header di bagian atas dengan latar belakang ungu untuk memisahkan judul kolom dari data.
+         </p> 
+         <p>  Tabel kedua berjudul 'Table Mahasiswa', yang berisi informasi mengenai mahasiswa. Tabel ini terdiri dari empat kolom: 'Nim', 'Nama', 'Ipk', dan 'Jurusan'. Kolom 'Nim' menampilkan Nomor Induk Mahasiswa (NIM), misalnya 5220311139 untuk Bintang, 5220311140 untuk Rio, dan seterusnya. Kolom 'Nama' berisi nama mahasiswa, sedangkan kolom 'Ipk' menunjukkan Indeks Prestasi Kumulatif (IPK) mereka, seperti 3.75 untuk Bintang, 3.55 untuk Rio, dan lain-lain. Kolom terakhir, 'Jurusan', menunjukkan program studi mahasiswa, yaitu 'Sistem Informasi'. Setiap header kolom diberi latar belakang ungu yang menonjolkan judul tabel dan memisahkan bagian data dari header dengan jelas."
+          
+          Deskripsi ini memberikan panduan yang lebih detail tentang struktur tabel dan informasi yang ditampilkan di setiap kolom.</p>
+        <div class="top-footer">
+          <p>Rio Zainurrofiqi</p>
+        </div>
+       
+        <div class="footer-social-icons">
+          <div class="icon"><i class="uil uil-instagram"></i></div>
+          <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+          <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+            <p>
+                Copyright 2024 &copy;
+                <a href="#home" style="text-decoration: none">Zainur</a> - All 
+                rights reserved
+              </p>
+        </div>
+      </footer>
+
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

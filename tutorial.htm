@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      /* Styles */
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(135deg, #9290C3, #9290C3);
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 1rem;
+        text-align: left;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th, td {
+        color: #000000;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #000000;
+      }
+
+      th {
+        background-color: #9290C3;
+        color: white;
+      }
+
+      td {
+        background-color: #f9f9f9;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        margin-top: 20px;
+        font-size: small;
+      }
+
+      footer a {
+        color: #0010ec;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        #header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .nav-menu ul {
+          flex-direction: column;
+        }
+
+        .nav-menu-btn {
+          margin-top: 20px;
+        }
+
+        table {
+          font-size: 5px;
+        }
+
+        th, td {
+          padding: 10px;
+          width: 40px;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Unicons for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <title>Tutorial Membuat HTML</title>
+  </head>
+  <body> 
+    
+    <!-- Header -->
+    <nav id="header">
+      <div class="nav-logo">
+        <p class="nav-name">Tutorial</p>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+          <li class="nav_list"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav_list"><a href="about.htm" class="nav-link">About</a></li>
+          <li class="nav_list"><a href="project.htm" class="nav-link">Projects</a></li>
+          <li class="nav_list"><a href="tutorial.htm" class="nav-link">Tutorial</a></li>
+          <li class="nav_list"><a href="contact.htm" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-button">
+        <a href="https://drive.google.com/file/d/1AF0qSqFwn9Tnp4GhFykm9_0sIvpuqI86/view?usp=drive_link" download class="btn">
+          Download CV <i class="uil uil-file-alt"></i>
+        </a>
+      </div>
+      <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+      
+    <!-- Main Section -->
+    <main class="wrapper">
+      <section class="section" id="tutorials">
+        <div class="top-header">
+          <h1>Tutorials</h1>
+        </div>
+
+        <!-- Tutorial Links -->
+        <div class="project-container">
+          <div class="project-box" onClick="window.location.href='form.htm'">
+            <i class="uil uil-file-alt"></i>
+            <h3>Cara Membuat Form</h3>
+            <label>Learn how to build forms with HTML</label>
+          </div>
+          <div class="project-box" onClick="window.location.href='html5.htm'">
+            <i class="uil uil-location-point"></i>
+            <h3>Tutorial HTML5</h3>
+            <label>Learn how to build websites using HTML5</label>
+          </div>
+          <div class="project-box" onClick="window.location.href='table.htm'">
+            <i class="uil uil-table"></i>
+            <h3>Cara Membuat Tabel</h3>
+            <label>Master creating and styling tables in HTML</label>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="top-footer">
+        <p>Rio Zainurrofiqi</p>
+      </div>
+
+      <div class="footer-social-icons">
+        <div class="icon">
+          <a href="https://www.instagram.com/rio_rofiqi/?next=%2Fsaorisaostiram144%2F" target="_blank" style="color: inherit;">
+            <i class="uil uil-instagram"></i>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="https://www.linkedin.com/in/rio-rofiqi-2ab134300/" target="_blank" style="color: inherit;">
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="https://github.com/rioooz" target="_blank" style="color: inherit;">
+            <i class="uil uil-github-alt"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom-footer">
+        <p>
+          Copyright 2024 &copy;
+          <a href="#home" style="text-decoration: none">Zainur</a> - All rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Menu Toggle -->
+    <script>
+      function myMenuFunction() {
+        const navMenu = document.getElementById("myNavMenu");
+        navMenu.classList.toggle("show");
+      }
+    </script>
+
+    <!-- External JavaScript Libraries -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
